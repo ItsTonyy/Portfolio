@@ -26,6 +26,8 @@ export default function Home() {
       >
         <Header />
         <ModeToggle />
+
+        {/* Landing page */}
         <div className='flex flex-col justify-center align-middle h-full'>
           <div className='text-2xl md:text-4xl font-light  p-2 text-transparent bg-clip-text bg-gradient-to-b
            dark:from-zinc-100 dark:via-zinc-300 dark:to-zinc-500 text-center'>
@@ -40,6 +42,11 @@ export default function Home() {
             And i&apos;m a <FlipWords words={words}/>
           </div>
         </div>
+       
+        
+
+        {/* Projects */}
+
       </motion.div>
     </AuroraBackground>
   );
