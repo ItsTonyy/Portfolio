@@ -52,12 +52,23 @@ export default function Home() {
               And i&apos;m a <FlipWords words={words} />
             </div>
           </div>
-
-          {/* Projects */}
         </motion.div>
       </AuroraBackground>
 
-      <div className='flex flex-col h-dvh w-full bg-gradient-to-b from-[#18181B] to-[#0D0D0F]'>
+
+      {/* About */}
+      <div className='flex flex-col h-dvh w-full bg-gradient-to-b from-[#18181B] to-[#0D0D0F] '>
+        <div
+          className='flex justify-start text-2xl md:text-6xl font-bold py-12 px-24 text-transparent bg-clip-text bg-gradient-to-b
+           dark:from-zinc-50 dark:via-zinc-200 dark:to-zinc-400 text-center'
+        >
+          About
+        </div>
+        
+      </div>
+
+      {/* Projects */}
+      <div className='flex flex-col h-dvh w-full bg-gradient-to-b from-[#0D0D0F] to-[#0E0E10]'>
         <div
           className='flex justify-start text-2xl md:text-6xl font-bold py-12 px-24 text-transparent bg-clip-text bg-gradient-to-b
            dark:from-zinc-50 dark:via-zinc-200 dark:to-zinc-400 text-center'
@@ -67,15 +78,7 @@ export default function Home() {
         
       </div>
 
-      <div className='flex flex-col h-dvh w-full bg-gradient-to-b from-[#0D0D0F] to-[#0E0E10]'>
-        <div
-          className='flex justify-start text-2xl md:text-6xl font-bold py-12 px-24 text-transparent bg-clip-text bg-gradient-to-b
-           dark:from-zinc-50 dark:via-zinc-200 dark:to-zinc-400 text-center'
-        >
-          About
-        </div>
-        
-      </div>
+      
     </div>
   );
 }
