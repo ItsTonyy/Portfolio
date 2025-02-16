@@ -2,11 +2,11 @@
 
 import React from 'react';
 import { Header } from '@/components/header';
-
 import { motion } from 'framer-motion';
 import { AuroraBackground } from '@/components/ui/aurora-background';
 //import { ModeToggle } from '@/components/modeToggle';
 import { FlipWords } from '@/components/ui/flip-words';
+import Image from 'next/image';
 
 export default function Home() {
   const words = [
@@ -55,16 +55,34 @@ export default function Home() {
         </motion.div>
       </AuroraBackground>
 
-
       {/* About */}
       <div className='flex flex-col h-dvh w-full bg-gradient-to-b from-[#18181B] to-[#0D0D0F] '>
         <div
-          className='flex justify-start text-2xl md:text-6xl font-bold py-12 px-24 text-transparent bg-clip-text bg-gradient-to-b
-           dark:from-zinc-50 dark:via-zinc-200 dark:to-zinc-400 text-center'
+          className='flex justify-start text-2xl md:text-6xl font-bold py-12 px-24 text-transparent
+           bg-clip-text bg-gradient-to-b dark:from-zinc-50 dark:via-zinc-200 dark:to-zinc-400 text-center'
         >
-          About
+          About Me
         </div>
-        
+
+        <div className='flex flex-row pt-8 pl-24 gap-8'>
+            <div>
+              <Image
+                src='/myImage.jpg'
+                alt='picture of me'
+                width={400}
+                height={400}
+                className='rounded-xl'
+              />
+            </div>
+
+            <div className='max-w-[700px] flex items-center'>
+              <p className='text-xl'>
+                My name is Tony Terra Nova, born and raised in Brazil. I&apos;m a budding programmer navigating my path in
+                the vast world of technology. My primary aim is to secure my inaugural job opportunity, with the future
+                aspiration of aiding individuals in my country who need assistance to enter the realm of programming.
+                Presently, I&apos;m pursuing a degree in Computer Science at a federal university of technology.</p>
+            </div>
+          </div>
       </div>
 
       {/* Projects */}
@@ -75,10 +93,7 @@ export default function Home() {
         >
           Projects
         </div>
-        
       </div>
-
-      
     </div>
   );
 }
